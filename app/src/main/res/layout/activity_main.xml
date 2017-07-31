@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF495C6B"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.jason.zeroenglish.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/word_translate_info"
+        android:layout_width="match_parent"
+        android:layout_margin="20dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/word_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="#FFFFFEFF"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/phonetic_symbol_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#FFFFFEFF"
+            android:text="TextView" />
+
+    </LinearLayout>
+
+    <com.jason.zeroenglish.ui.BetterRecyclerView
+        android:id="@+id/container_recycler_view"
+        android:background="#FFEFEFEF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
